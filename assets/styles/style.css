@@ -4,8 +4,9 @@
 body {
     margin: 100px;
     padding: 0;
-    border: 2px solid lightgray;
+    border: 2px solid darkslateblue;
     box-sizing: border-box;
+    background-color: whitesmoke;
 }
 
 /* top heading section (including name and navbar) */
@@ -31,8 +32,8 @@ header nav ul li a {
     font-family: Georgia,serif
 }
 header nav ul li a:hover {
-    color: #222;
-    border-bottom: 2px solid darkgray;
+    color: darkslateblue;
+    border-bottom: 2px solid darkslateblue;
 }
 
 
@@ -151,10 +152,66 @@ nav ul li {
     position: absolute;
     top: 10px;
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
     color: whitesmoke;
     border-bottom-right-radius: 15px;
     padding: 10px;
     margin: 0;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
+.skills ul {
+    margin: 20px;
+    list-style-type: none;
+}
+
+.skills ul li {
+    padding: 5px;
+}
+
+.skills ul li:first-child {
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact-info p {
+    font-size: 15px;
+    color: #94929D;
+    font-family: Georgia,serif;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: darkslateblue;
+    border-bottom: 2px solid darkslateblue;
+}
+
+.footer {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 36px;
+    color: #262637;
+    letter-spacing: -1px;
+    line-height: 48px;
+    font-weight: 700px;
+}
+
+.footer-divider {
+    border-top: 2px solid lightgray;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -178,5 +235,12 @@ nav ul li {
     .work-item {
         flex-basis: 100%;
     }
-    
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
 }
